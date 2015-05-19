@@ -1,10 +1,9 @@
 ---
-title: API Reference
+title: UXCam API Reference
 
 language_tabs:
-  - shell
-  - ruby
-  - python
+  - Objective C
+  - Java
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
@@ -18,13 +17,118 @@ search: true
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+FIXUX LETS YOU RECORD USER’S ACTUAL EXPERIENCE WITH YOUR APP, ATTACH THESE RECORDING TO YOUR FAVORITE TOOLS PROVIDING YOU WITH THE RIGHT INSIGHT YOU NEED TO FIX USER EXPERIENCE AND INCREASE CUSTOMER ENGAGEMENT AND RETENTION.
 
-We have language bindings in Shell, Ruby, and Python! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+# Installation
 
-This example API documentation page was created with [Slate](http://github.com/tripit/slate). Feel free to edit it and use it as a base for your own API's documentation.
+## iOS
 
-# Authentication
+### Cocoapods
+
+**Step 1: Cocoapods Integration**
+
+You’ll need to have Cocoapods installed. If you haven’t already, see [this page](https://cocoapods.org/) for installation details. Once you have installed Cocoapods, Create file called ‘Podfile’ containing this:
+
+`platform :ios, '7.0'`
+
+`pod 'UXCam'`
+
+or add
+
+`pod 'UXCam'`
+
+to your existing podfile. Then from your Terminal, type the following commands:
+
+`$ pod install`
+
+Now open the XCode Workspace generated and complete Step 2: 'Start UXCam'.
+
+**Step 2: Start UXCam**
+
+Import the UXCam Agent header at the top of your AppDelegate.m:
+
+`#import &lt;UXCam/UXCam.h&gt;`
+
+Add this call as the first line of your application:didFinishLaunchingWithOptions: method
+
+`[UXCam startWithKey:@"APP KEY"];`
+
+<aside class="notice">
+You must replace <code>APP KEY</code> with your personal APP key.
+</aside>
+
+<img src="images/include.jpg" alt="cocoapods" />
+
+### Manual
+
+**Step 1: Manual Integration**
+
+**(a): Download**
+
+[Download](https://dashboard.uxcam.com/app/app/downloadsdk/type/ios) latest SDK.
+
+**(b): Integration**
+
+<img src="images/dragndrop.png" alt="manualDragnDrop" />
+
+Unzip the downloaded file and drag the **"UXCam.framework"** from the downloaded UXCam folder into your Xcode project
+(dropping it onto your Project in the Project Navigator window). When prompted, select **"Copy items into destination..."**
+and **"Create folder references..."**
+
+<img src="images/libraries.png" alt="libraries" />
+
+Then, add these following libraries to your Linker settings. Click on your Project in the Project Navigator window, under Targets select your app, and click the Build Phases tab. <br>
+Open the **"Link Binary with Libraries"** list. Click the plus sign (+) and add :-
+
+- AVFoundation<br>
+- CoreGraphics<br>
+- CoreMedia<br>
+- CoreVideo<br>
+- MobileCoreServices<br>
+- QuartzCore<br>
+- SystemConfiguration<br>
+
+**Step 2: Start UXCam**
+
+Import the UXCam Agent header at the top of your AppDelegate.m:
+
+`#import <UXCam/UXCam.h>`
+
+Add this call as the first line of your application:didFinishLaunchingWithOptions: method
+
+`[UXCam startWithKey:@"APP KEY"];`
+
+<aside class="notice">
+You must replace <code>APP KEY</code> with your personal APP key.
+</aside>
+
+<img src="images/include.jpg" alt="cocoapods" />
+
+## Android
+  
+### Android Studio
+
+#### JAR
+jar jar 
+#### AAR
+aar aar
+#### MAVEN
+maven maven
+### Eclipse
+ eclipse 
+### Others
+
+## Phonegap
+
+# API Reference
+
+## iOS API Reference
+
+### startWithKey
+
+## Android API Reference
+
+<!-- # Authentication
 
 > To authorize, use this code:
 
@@ -164,5 +268,5 @@ This endpoint retrieves a specific kitten.
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the cat to retrieve
+ID | The ID of the cat to retrieve -->
 
